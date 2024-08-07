@@ -4,6 +4,14 @@ FRRouting on Raspberry Pi 4B
 ![pifrr2](pifrr2.jpg)
 #### Deploy
 
+
+```                                                           
+  +-----+    12.0.0.0/24     +-----+   23.0.0.0/24     +-----+
+  | R1  ---------------------| R2  |-------------------| R3  |
+  +-----+                    +-----+                   +-----+
+```
+
+
 ```
 $ sudo clab deploy -t pifrr.yml
 INFO[0000] Containerlab v0.56.0 started
