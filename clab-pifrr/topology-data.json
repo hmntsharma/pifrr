@@ -1,0 +1,138 @@
+{
+  "name": "pifrr",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-d03cfed4fef9",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "R1": {
+      "index": "0",
+      "shortname": "R1",
+      "longname": "R1",
+      "fqdn": "R1.pifrr.io",
+      "group": "",
+      "labdir": "/home/admin/github/pifrr/clab-pifrr/R1",
+      "kind": "linux",
+      "image": "quay.io/frrouting/frr:10.1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d03cfed4fef9",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/admin/github/pifrr/clab-pifrr/R1",
+        "clab-node-name": "R1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/admin/github/pifrr/pifrr.yml",
+        "containerlab": "pifrr"
+      },
+      "port-bindings": [
+      ]
+    },
+    "R2": {
+      "index": "1",
+      "shortname": "R2",
+      "longname": "R2",
+      "fqdn": "R2.pifrr.io",
+      "group": "",
+      "labdir": "/home/admin/github/pifrr/clab-pifrr/R2",
+      "kind": "linux",
+      "image": "quay.io/frrouting/frr:10.1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d03cfed4fef9",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/admin/github/pifrr/clab-pifrr/R2",
+        "clab-node-name": "R2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/admin/github/pifrr/pifrr.yml",
+        "containerlab": "pifrr"
+      },
+      "port-bindings": [
+      ]
+    },
+    "R3": {
+      "index": "2",
+      "shortname": "R3",
+      "longname": "R3",
+      "fqdn": "R3.pifrr.io",
+      "group": "",
+      "labdir": "/home/admin/github/pifrr/clab-pifrr/R3",
+      "kind": "linux",
+      "image": "quay.io/frrouting/frr:10.1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d03cfed4fef9",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/admin/github/pifrr/clab-pifrr/R3",
+        "clab-node-name": "R3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/admin/github/pifrr/pifrr.yml",
+        "containerlab": "pifrr"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:4f:c1:bf",
+        "peer": "z"
+      },
+      "z": {
+        "node": "R2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:46:18:19",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "R2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:31:7b:43",
+        "peer": "z"
+      },
+      "z": {
+        "node": "R3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f7:e1:79",
+        "peer": "a"
+      }
+    }
+  ]
+}
