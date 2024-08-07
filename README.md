@@ -38,3 +38,11 @@ PING 23.0.0.3 (23.0.0.3): 56 data bytes
 1 packets transmitted, 1 packets received, 0% packet loss
 round-trip min/avg/max = 0.217/0.217/0.217 ms
 ```
+
+```
+ $ sudo docker exec -it R1 traceroute -n 23.0.0.3
+traceroute to 23.0.0.3 (23.0.0.3), 30 hops max, 46 byte packets
+ 1  12.0.0.2  0.017 ms  0.024 ms  0.019 ms
+ 2  23.0.0.3  0.013 ms  0.021 ms  0.018 ms
+admin@inpinity:~/github/pifrr $
+```
